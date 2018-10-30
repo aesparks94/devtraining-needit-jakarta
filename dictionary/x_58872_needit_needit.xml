@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="2" type="collection">
+        <element label="New field 1" max_length="40" name="new_field_1" type="integer"/>
+        <element label="New field 2" max_length="40" name="new_field_2" type="integer"/>
+        <element label="New field 3" max_length="40" name="u_field_3" type="integer"/>
+        <element label="When needed" mandatory="true" max_length="40" name="u_glide_date_time_2" type="glide_date_time"/>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="urdept" label="Request Type" mandatory="true" max_length="40" name="u_request_typoe" type="string">
+            <choice>
+                <element label="Human Resources" sequence="0" value="hr"/>
+                <element label="Facilities" sequence="1" value="faci"/>
+                <element label="Legal" sequence="2" value="legal"/>
+                <element label="Your Deprtmnt" sequence="3" value="urdept"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="yourdept1" label="What Needed" mandatory="true" max_length="40" name="u_what_need" type="string">
+            <choice>
+                <element label="HR1" sequence="0" value="hr1"/>
+                <element label="HR2" sequence="1" value="hr2"/>
+                <element label="Fac1" sequence="2" value="fac1"/>
+                <element label="Fac2" sequence="3" value="fac2"/>
+                <element label="Legal1" sequence="4" value="leg1"/>
+                <element label="Legal2" sequence="5" value="leg2"/>
+                <element label="Your Dept 1" sequence="6" value="yourdept1"/>
+                <element label="Your Dept 2" sequence="7" value="yourdept2"/>
+            </choice>
+        </element>
+    </element>
+</database>
